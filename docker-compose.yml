@@ -2,6 +2,8 @@ version: '3.8'
 
 services:
   #database section
+  productdb:
+    image: mysql:8.1.0
   
   #infrastructure section
   portainer:
@@ -18,3 +20,5 @@ networks:
 volumes:
   portainer_data:
     name: portainer_data
+  mysql_data:
+    name: mysql_data

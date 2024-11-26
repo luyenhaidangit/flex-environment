@@ -2,6 +2,20 @@ version: '3.8'
 
 services:
   #database section
+  productdb:
+    container_name: productdb
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: "Luyenhaidang10062002@"
+      MYSQL_TCP_PORT: 3306
+      MYSQL_DATABASE: ProductDB
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: "Luyenhaidang10062002@"
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
 
   #infrastructure section
   portainer:

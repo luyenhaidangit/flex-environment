@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Đảm bảo script có quyền thực thi
+chmod +x "$0"
+
 # Cập nhật repository từ Git
 echo "Đang cập nhật repository từ Git..."
 git pull || { echo "Git pull thất bại."; exit 1; }

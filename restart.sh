@@ -10,7 +10,7 @@ docker-compose down || { echo "Không thể dừng các container."; exit 1; }
 
 # Tải lại tất cả các image mới nhất (nếu có)
 echo "Đang tải tất cả các Docker image mới nhất..."
-docker-compose pull || { echo "Không thể tải image mới."; exit 1; }
+docker-compose -f docker-compose.yml -f docker-compose.override.yml pull || { echo "Không thể tải image mới."; exit 1; }
 
 # Chỉ chạy dịch vụ Portainer
 echo "Đang khởi động lại dịch vụ Portainer..."

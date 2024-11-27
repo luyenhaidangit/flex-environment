@@ -8,14 +8,13 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: "Luyenhaidang10062002@"
-      MYSQL_TCP_PORT: 3306
-      MYSQL_DATABASE: ProductDB
-      MYSQL_USER: admin
+      MYSQL_DATABASE: "ProductDB"
+      MYSQL_USER: "admin"
       MYSQL_PASSWORD: "Luyenhaidang10062002@"
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
-      - "3307:3307"
+      - "3307:3306"
 
   #infrastructure section
   portainer:

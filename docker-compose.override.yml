@@ -27,8 +27,8 @@ services:
   pgadmin:
     container_name: pgadmin
     environment:
-      - PGADMIN_DEFAULT_EMAIL: "luyenhaidangit@gmail.com"
-      - PGADMIN_DEFAULT_PASSWORD: "Luyenhaidang10062002@"
+      PGADMIN_DEFAULT_EMAIL: "luyenhaidangit@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "Luyenhaidang10062002@"
     ports:
       - "5050:80"
     volumes:

@@ -15,3 +15,4 @@ pgadmin
 postgre
 - http://localhost:5432
 - admin/Luyenhaidang10062002@/CustomerDb
+- flex/luyenhaidangit/Luyenhaidang10062002@

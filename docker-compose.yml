@@ -5,7 +5,7 @@ services:
   productdb:
     image: mysql:8.1.0
   customerdb:
-    image: postgres:alpine3.20.3
+    image: postgres:15-alpine
   
   #infrastructure section
   portainer:

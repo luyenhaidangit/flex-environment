@@ -8,6 +8,8 @@ services:
   #infrastructure section
   portainer:
     image: portainer/portainer-ce:2.22.0
+  pgadmin:
+    image: dpage/pgadmin4:8.13
 
   #service section
 
@@ -22,3 +24,5 @@ volumes:
     name: portainer_data
   mysql_data:
     name: mysql_data
+  pgadmin_data:
+    name: pgadmin_data

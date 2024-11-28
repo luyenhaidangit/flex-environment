@@ -10,10 +10,21 @@ services:
       MYSQL_DATABASE: "ProductDB"
       MYSQL_USER: "admin"
       MYSQL_PASSWORD: "Luyenhaidang10062002@"
-    volumes:
-      - mysql_data:/var/lib/mysql
     ports:
       - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  customerdb:
+    container_name: customerdb
+    environment:
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "Luyenhaidang10062002@"
+      POSTGRES_DB: "CustomerDb"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   #infrastructure section
   portainer:

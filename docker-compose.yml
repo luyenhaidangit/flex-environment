@@ -4,6 +4,8 @@ services:
   #database section
   productdb:
     image: mysql:8.1.0
+  customerdb:
+    image: postgres:alpine3.20.3
   
   #infrastructure section
   portainer:
@@ -26,3 +28,5 @@ volumes:
     name: mysql_data
   pgadmin_data:
     name: pgadmin_data
+  postgres_data:
+    name: postgres_data

@@ -32,3 +32,5 @@ volumes:
     name: pgadmin_data
   postgres_data:
     name: postgres_data
+  redis_data:
+    name: redis_data

@@ -6,6 +6,8 @@ services:
     image: mysql:8.1.0
   customerdb:
     image: postgres:15-alpine
+  basketdb:
+    image: redis:7-alpine
   
   #infrastructure section
   portainer:

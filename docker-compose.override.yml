@@ -26,6 +26,13 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  basketdb:
+    container_name: basketdb
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
   #infrastructure section
   portainer:
     container_name: portainer

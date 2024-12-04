@@ -36,3 +36,5 @@ volumes:
     name: postgres_data
   redis_data:
     name: redis_data
+  oracle_data:
+    name: oracle_data

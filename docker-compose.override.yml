@@ -4,9 +4,9 @@ services:
   #database section
   accountdb:
     container_name: accountdb
-  environment:
+    environment:
       ORACLE_PASSWORD: "Luyenhaidang10062002@"
-  volumes:
+    volumes:
       - oracle_data:/opt/oracle/oradata
 
   productdb:

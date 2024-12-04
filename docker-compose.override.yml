@@ -5,8 +5,10 @@ services:
   accountdb:
     container_name: accountdb
     environment:
-      ORACLE_PASSWORD: "Luyenhaidang10062002@"
-    platform: linux/amd64
+      - ACCEPT_ORACLE_LICENSE=yes
+      - ORACLE_SID=FREE
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_PWD=Luyenhaidang10062002@
     volumes:
       - oracle_data:/opt/oracle/oradata
 

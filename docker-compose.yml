@@ -3,7 +3,7 @@ version: '3.8'
 services:
   #database section
   accountdb:
-    image: gvenzl/oracle-xe:21-slim
+    image: container-registry.oracle.com/database/free:21.3.0.0
   productdb:
     image: mysql:8.1.0
   customerdb:

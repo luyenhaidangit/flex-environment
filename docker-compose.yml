@@ -2,6 +2,8 @@ version: '3.8'
 
 services:
   #database section
+  accountdb:
+    image: gvenzl/oracle-xe:21-slim
   productdb:
     image: mysql:8.1.0
   customerdb:

@@ -2,6 +2,13 @@ version: '3.8'
 
 services:
   #database section
+  accountdb:
+    container_name: accountdb
+  environment:
+      ORACLE_PASSWORD: "Luyenhaidang10062002@"
+  volumes:
+      - oracle_data:/opt/oracle/oradata
+
   productdb:
     container_name: productdb
     command: --default-authentication-plugin=mysql_native_password

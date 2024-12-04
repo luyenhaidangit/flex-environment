@@ -6,6 +6,7 @@ services:
     container_name: accountdb
     environment:
       ORACLE_PASSWORD: "Luyenhaidang10062002@"
+    platform: linux/amd64
     volumes:
       - oracle_data:/opt/oracle/oradata
 

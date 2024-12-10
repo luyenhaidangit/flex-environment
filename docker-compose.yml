@@ -2,6 +2,8 @@ version: '3.8'
 
 services:
   #database section
+  investordb:
+    image: container-registry.oracle.com/database/free:23.5.0.0-lite
   accountdb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   productdb:
@@ -38,3 +40,5 @@ volumes:
     name: redis_data
   oracle_data:
     name: oracle_data
+  investor_data:
+    name: investor_data

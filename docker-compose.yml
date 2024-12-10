@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   #database section
-  investordb:
-    image: container-registry.oracle.com/database/free:23.5.0.0-lite
   securitiesdb:
+    image: container-registry.oracle.com/database/free:23.5.0.0-lite
+  investordb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   productdb:
     image: mysql:8.1.0

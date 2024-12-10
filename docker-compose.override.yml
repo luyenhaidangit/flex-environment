@@ -2,19 +2,6 @@ version: '3.8'
 
 services:
   #database section
-  investordb:
-    container_name: investordb
-    environment:
-      - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=INVESTOR
-      - ORACLE_PDB=INVESTORPDB
-      - ORACLE_PWD=Luyenhaidang10062002@
-    ports:
-      - "1531:1521"
-      - "5501:5500"
-    volumes:
-      - investor_data:/opt/oracle/oradata
-      
   securitiesdb:
     container_name: securitiesdb
     environment:
@@ -27,6 +14,19 @@ services:
       - "5500:5500"
     volumes:
       - securitiesdb_data:/opt/oracle/oradata
+
+  investordb:
+    container_name: investordb
+    environment:
+      - ACCEPT_ORACLE_LICENSE=yes
+      - ORACLE_SID=INVESTOR
+      - ORACLE_PDB=INVESTORPDB
+      - ORACLE_PWD=Luyenhaidang10062002@
+    ports:
+      - "1531:1521"
+      - "5501:5500"
+    volumes:
+      - investor_data:/opt/oracle/oradata
 
   productdb:
     container_name: productdb

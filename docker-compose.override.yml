@@ -15,18 +15,18 @@ services:
     volumes:
       - investor_data:/opt/oracle/oradata
       
-  accountdb:
-    container_name: accountdb
+  securitiesdb:
+    container_name: securitiesdb
     environment:
       - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=FREE
-      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_SID=SECURITIES
+      - ORACLE_PDB=SECURITIESDB
       - ORACLE_PWD=Luyenhaidang10062002@
     ports:
       - "1521:1521"
       - "5500:5500"
     volumes:
-      - oracle_data:/opt/oracle/oradata
+      - securitiesdb_data:/opt/oracle/oradata
 
   productdb:
     container_name: productdb

@@ -4,7 +4,7 @@ services:
   #database section
   investordb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  accountdb:
+  securitiesdb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   productdb:
     image: mysql:8.1.0
@@ -38,7 +38,7 @@ volumes:
     name: postgres_data
   redis_data:
     name: redis_data
-  oracle_data:
-    name: oracle_data
+  securitiesdb_data:
+    name: securitiesdb_data
   investor_data:
     name: investor_data

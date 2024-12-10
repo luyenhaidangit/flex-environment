@@ -19,8 +19,8 @@ services:
     container_name: securitiesdb
     environment:
       - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=SECURITIES
-      - ORACLE_PDB=SECURITIESDB
+      - ORACLE_SID=FREE
+      - ORACLE_PDB=ORCLPDB1
       - ORACLE_PWD=Luyenhaidang10062002@
     ports:
       - "1521:1521"

@@ -28,6 +28,19 @@ services:
     volumes:
       - investordb_data:/opt/oracle/oradata
 
+  systemdb:
+    container_name: systemdb
+    environment:
+      - ACCEPT_ORACLE_LICENSE=yes
+      - ORACLE_SID=FREE
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_PWD=Luyenhaidang10062002@
+    ports:
+      - "1534:1521"
+      - "5502:5500"
+    volumes:
+      - systemdb_data:/opt/oracle/oradata
+
   productdb:
     container_name: productdb
     command: --default-authentication-plugin=mysql_native_password

@@ -6,6 +6,8 @@ services:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   investordb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
+  systemdb:
+    image: container-registry.oracle.com/database/free:23.5.0.0-lite
   productdb:
     image: mysql:8.1.0
   customerdb:
@@ -42,3 +44,5 @@ volumes:
     name: securitiesdb_data
   investordb_data:
     name: investordb_data
+  systemdb_data:
+    name: systemdb_data

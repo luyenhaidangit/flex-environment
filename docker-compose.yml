@@ -8,18 +8,12 @@ services:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   systemdb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  productdb:
-    image: mysql:8.1.0
-  customerdb:
-    image: postgres:15-alpine
   basketdb:
     image: redis:7-alpine
   
   #infrastructure section
   portainer:
     image: portainer/portainer-ce:2.22.0
-  pgadmin:
-    image: dpage/pgadmin4:8.13
 
   #service section
 
@@ -32,12 +26,6 @@ networks:
 volumes:
   portainer_data:
     name: portainer_data
-  mysql_data:
-    name: mysql_data
-  pgadmin_data:
-    name: pgadmin_data
-  postgres_data:
-    name: postgres_data
   redis_data:
     name: redis_data
   securitiesdb_data:

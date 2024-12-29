@@ -41,30 +41,6 @@ services:
     volumes:
       - systemdb_data:/opt/oracle/oradata
 
-  productdb:
-    container_name: productdb
-    command: --default-authentication-plugin=mysql_native_password
-    environment:
-      MYSQL_ROOT_PASSWORD: "Luyenhaidang10062002@"
-      MYSQL_DATABASE: "ProductDB"
-      MYSQL_USER: "admin"
-      MYSQL_PASSWORD: "Luyenhaidang10062002@"
-    ports:
-      - "3307:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-
-  customerdb:
-    container_name: customerdb
-    environment:
-      POSTGRES_USER: "admin"
-      POSTGRES_PASSWORD: "Luyenhaidang10062002@"
-      POSTGRES_DB: "CustomerDb"
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
   basketdb:
     container_name: basketdb
     ports:
@@ -81,14 +57,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-  pgadmin:
-    container_name: pgadmin
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "luyenhaidangit@gmail.com"
-      PGADMIN_DEFAULT_PASSWORD: "Luyenhaidang10062002@"
-    ports:
-      - "5050:80"
-    volumes:
-      - pgadmin_data:/root/.pgadmin
 
   #service section

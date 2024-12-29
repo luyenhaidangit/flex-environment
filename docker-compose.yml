@@ -26,11 +26,11 @@ networks:
 volumes:
   portainer_data:
     name: portainer_data
-  redis_data:
-    name: redis_data
   securitiesdb_data:
     name: securitiesdb_data
   investordb_data:
     name: investordb_data
   systemdb_data:
     name: systemdb_data
+  basketdb_data:
+    name: basketdb_data

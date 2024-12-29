@@ -46,7 +46,7 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - redis_data:/data
+      - basketdb_data:/data
 
   #infrastructure section
   portainer:

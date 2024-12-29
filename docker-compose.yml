@@ -40,5 +40,5 @@ volumes:
     name: redis_data
   securitiesdb_data:
     name: securitiesdb_data
-  investor_data:
-    name: investor_data
+  investordb_data:
+    name: investordb_data

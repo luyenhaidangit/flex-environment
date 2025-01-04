@@ -48,6 +48,19 @@ services:
     volumes:
       - basketdb_data:/data
 
+  orderingdb:
+    container_name: orderingdb
+    environment:
+      - ACCEPT_ORACLE_LICENSE=yes
+      - ORACLE_SID=FREE
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_PWD=Luyenhaidang10062002@
+    ports:
+      - "1534:1521"
+      - "5502:5500"
+    volumes:
+      - orderingdb_data:/opt/oracle/oradata
+
   #infrastructure section
   portainer:
     container_name: portainer

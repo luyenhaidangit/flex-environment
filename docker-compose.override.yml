@@ -72,7 +72,7 @@ services:
         - "1535:1521"
         - "5503:5500"
       volumes:
-        - identity_data:/opt/oracle/oradata
+        - identitydb_data:/opt/oracle/oradata
 
   #infrastructure section
   portainer:

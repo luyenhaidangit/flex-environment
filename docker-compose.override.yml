@@ -61,18 +61,18 @@ services:
     volumes:
       - orderingdb_data:/opt/oracle/oradata
 
-    identitydb:
-      container_name: identitydb
-      environment:
-        - ACCEPT_ORACLE_LICENSE=yes
-        - ORACLE_SID=FREE
-        - ORACLE_PDB=ORCLPDB1
-        - ORACLE_PWD=Luyenhaidang10062002@
-      ports:
-        - "1535:1521"
-        - "5503:5500"
-      volumes:
-        - identitydb_data:/opt/oracle/oradata
+  identitydb:
+    container_name: identitydb
+    environment:
+      - ACCEPT_ORACLE_LICENSE=yes
+      - ORACLE_SID=FREE
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_PWD=Luyenhaidang10062002@
+    ports:
+      - "1535:1521"
+      - "5503:5500"
+    volumes:
+      - identitydb_data:/opt/oracle/oradata
 
   #infrastructure section
   portainer:

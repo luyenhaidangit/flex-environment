@@ -12,6 +12,8 @@ services:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   identitydb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
+  aspnetidentitydb:
+    image: container-registry.oracle.com/database/free:23.5.0.0-lite
   basketdb:
     image: redis:7-alpine
   
@@ -40,5 +42,7 @@ volumes:
     name: orderingdb_data
   identitydb_data:
     name: identitydb_data
+  aspnetidentitydb:
+    name: aspnetidentitydb_data
   basketdb_data:
     name: basketdb_data

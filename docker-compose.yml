@@ -42,7 +42,7 @@ volumes:
     name: orderingdb_data
   identitydb_data:
     name: identitydb_data
-  aspnetidentitydb:
+  aspnetidentitydb_data:
     name: aspnetidentitydb_data
   basketdb_data:
     name: basketdb_data

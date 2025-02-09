@@ -14,7 +14,7 @@ services:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   aspnetidentitydb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  redis:
+  redisdb:
     image: redis:7-alpine
   
   #infrastructure section

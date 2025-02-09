@@ -14,6 +14,8 @@ services:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   aspnetidentitydb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
+  identityserverdb:
+    image: container-registry.oracle.com/database/free:23.5.0.0-lite
   redisdb:
     image: redis:7-alpine
   
@@ -44,5 +46,7 @@ volumes:
     name: identitydb_data
   aspnetidentitydb_data:
     name: aspnetidentitydb_data
+  identityserverdb_data:
+    name: identityserverdb_data
   redisdb_data:
     name: redisdb_data

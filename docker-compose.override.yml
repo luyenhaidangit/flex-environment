@@ -90,6 +90,19 @@ services:
     volumes:
       - aspnetidentitydb_data:/opt/oracle/oradata
 
+  identityserverdb:
+    container_name: identityserverdb
+    environment:
+      - ACCEPT_ORACLE_LICENSE=yes
+      - ORACLE_SID=FREE
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_PWD=Luyenhaidang10062002@
+    ports:
+      - "1537:1521"
+      - "5505:5500"
+    volumes:
+      - identityserverdb_data:/opt/oracle/oradata
+
   #infrastructure section
   portainer:
     container_name: portainer

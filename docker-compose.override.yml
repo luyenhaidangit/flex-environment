@@ -47,6 +47,9 @@ services:
       - "6379:6379"
     volumes:
       - basketdb_data:/data
+    command: ["redis-server", "--requirepass", "Luyenhaidang10062002@"]
+    environment:
+      - REDIS_PASSWORD=Luyenhaidang10062002@
 
   orderingdb:
     container_name: orderingdb

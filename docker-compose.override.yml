@@ -41,12 +41,12 @@ services:
     volumes:
       - systemdb_data:/opt/oracle/oradata
 
-  basketdb:
-    container_name: basketdb
+  redisdb_data:
+    container_name: redisdb_data
     ports:
       - "6379:6379"
     volumes:
-      - basketdb_data:/data
+      - redisdb_data:/data
     command: ["redis-server", "--requirepass", "Luyenhaidang10062002@"]
     environment:
       - REDIS_PASSWORD=Luyenhaidang10062002@

@@ -42,7 +42,7 @@ services:
       - systemdb_data:/opt/oracle/oradata
 
   redisdb:
-    container_name: redisdb_data
+    container_name: redisdb
     ports:
       - "6379:6379"
     volumes:

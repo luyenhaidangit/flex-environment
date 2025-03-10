@@ -102,6 +102,7 @@ services:
       - "5505:5500"
     volumes:
       - identityserverdb_data:/opt/oracle/oradata
+
   mongodb:
     container_name: mongodb
     environment:

@@ -18,6 +18,8 @@ services:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   redisdb:
     image: redis:7-alpine
+  mongodb:
+    image: mongo:6.0
   
   #infrastructure section
   portainer:
@@ -27,7 +29,7 @@ services:
 
 #network section
 networks:
-  flex-network:
+  # flex-network:
     driver: bridge
 
 #volumes section
@@ -50,3 +52,5 @@ volumes:
     name: identityserverdb_data
   redisdb_data:
     name: redisdb_data
+  mongodb_data:
+    name: mongodb_data

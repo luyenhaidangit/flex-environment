@@ -29,7 +29,7 @@ services:
 
 #network section
 networks:
-  # flex-network:
+  flex-network:
     driver: bridge
 
 #volumes section

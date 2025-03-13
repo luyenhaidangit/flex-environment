@@ -122,5 +122,32 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
+      
+  openldap:
+    container_name: openldap
+    environment:
+      - LDAP_ORGANISATION=Flex Organization
+      - LDAP_DOMAIN=flex.com
+      - LDAP_ADMIN_PASSWORD=admin123
+      - LDAP_CONFIG_PASSWORD=config123
+      - LDAP_READONLY_USER=true
+      - LDAP_READONLY_USER_USERNAME=reader
+      - LDAP_READONLY_USER_PASSWORD=reader123
+    ports:
+      - "389:389"
+      - "636:636"
+    volumes:
+      - ldap_data:/var/lib/ldap
+      - ldap_config:/etc/ldap/slapd.d
+
+  phpldapadmin:
+    container_name: phpldapadmin
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=openldap
+      - PHPLDAPADMIN_HTTPS=false
+    ports:
+      - "8080:80"
+    depends_on:
+      - openldap
 
   #service section

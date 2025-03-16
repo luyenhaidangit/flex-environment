@@ -24,7 +24,6 @@ services:
       - ORACLE_PWD=Luyenhaidang10062002@
     ports:
       - "1531:1521"
-      - "5501:5500"
     volumes:
       - investordb_data:/opt/oracle/oradata
 

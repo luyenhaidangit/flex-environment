@@ -4,18 +4,6 @@ services:
   #database section
   securitiesdb:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  investordb:
-    image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  systemdb:
-    image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  orderingdb:
-    image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  identitydb:
-    image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  aspnetidentitydb:
-    image: container-registry.oracle.com/database/free:23.5.0.0-lite
-  identityserverdb:
-    image: container-registry.oracle.com/database/free:23.5.0.0-lite
   redisdb:
     image: redis:7-alpine
   mongodb:
@@ -24,13 +12,6 @@ services:
   #infrastructure section
   portainer:
     image: portainer/portainer-ce:2.22.0
-
-  openldap:
-    image: osixia/openldap:1.5.0
-  
-  phpldapadmin:
-    image: osixia/phpldapadmin:0.9.0
-
   #service section
 
 #network section

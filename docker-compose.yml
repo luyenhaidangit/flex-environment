@@ -1,4 +1,4 @@
-# Docker Compose file for the FlexDeploy environment
+# Docker compose file for the Flex environment
 
 services:
   #database section

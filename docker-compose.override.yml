@@ -14,31 +14,6 @@ services:
     volumes:
       - securitiesdb_data:/opt/oracle/oradata
 
-  investordb:
-    container_name: investordb
-    environment:
-      - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=FREE
-      - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=Luyenhaidang10062002@
-    ports:
-      - "1531:1521"
-    volumes:
-      - investordb_data:/opt/oracle/oradata
-
-  systemdb:
-    container_name: systemdb
-    environment:
-      - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=FREE
-      - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=Luyenhaidang10062002@
-    ports:
-      - "1534:1521"
-      - "5502:5500"
-    volumes:
-      - systemdb_data:/opt/oracle/oradata
-
   redisdb:
     container_name: redisdb
     ports:
@@ -48,58 +23,6 @@ services:
     command: ["redis-server", "--requirepass", "Luyenhaidang10062002@"]
     environment:
       - REDIS_PASSWORD=Luyenhaidang10062002@
-
-  orderingdb:
-    container_name: orderingdb
-    environment:
-      - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=FREE
-      - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=Luyenhaidang10062002@
-    ports:
-      - "1534:1521"
-      - "5502:5500"
-    volumes:
-      - orderingdb_data:/opt/oracle/oradata
-
-  identitydb:
-    container_name: identitydb
-    environment:
-      - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=FREE
-      - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=Luyenhaidang10062002@
-    ports:
-      - "1535:1521"
-      - "5503:5500"
-    volumes:
-      - identitydb_data:/opt/oracle/oradata
-
-  aspnetidentitydb:
-    container_name: aspnetidentitydb
-    environment:
-      - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=FREE
-      - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=Luyenhaidang10062002@
-    ports:
-      - "1536:1521"
-      - "5504:5500"
-    volumes:
-      - aspnetidentitydb_data:/opt/oracle/oradata
-
-  identityserverdb:
-    container_name: identityserverdb
-    environment:
-      - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=FREE
-      - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=Luyenhaidang10062002@
-    ports:
-      - "1537:1521"
-      - "5505:5500"
-    volumes:
-      - identityserverdb_data:/opt/oracle/oradata
 
   mongodb:
     container_name: mongodb
@@ -120,32 +43,4 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-      
-  openldap:
-    container_name: openldap
-    environment:
-      - LDAP_ORGANISATION=Flex Organization
-      - LDAP_DOMAIN=flex.com
-      - LDAP_ADMIN_PASSWORD=admin123
-      - LDAP_CONFIG_PASSWORD=config123
-      - LDAP_READONLY_USER=true
-      - LDAP_READONLY_USER_USERNAME=reader
-      - LDAP_READONLY_USER_PASSWORD=reader123
-    ports:
-      - "389:389"
-      - "636:636"
-    volumes:
-      - ldap_data:/var/lib/ldap
-      - ldap_config:/etc/ldap/slapd.d
-
-  phpldapadmin:
-    container_name: phpldapadmin
-    environment:
-      - PHPLDAPADMIN_LDAP_HOSTS=openldap
-      - PHPLDAPADMIN_HTTPS=false
-    ports:
-      - "8080:80"
-    depends_on:
-      - openldap
-
   #service section

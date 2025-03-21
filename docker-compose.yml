@@ -44,23 +44,7 @@ volumes:
     name: portainer_data
   securitiesdb_data:
     name: securitiesdb_data
-  investordb_data:
-    name: investordb_data
-  systemdb_data:
-    name: systemdb_data
-  orderingdb_data:
-    name: orderingdb_data
-  identitydb_data:
-    name: identitydb_data
-  aspnetidentitydb_data:
-    name: aspnetidentitydb_data
-  identityserverdb_data:
-    name: identityserverdb_data
   redisdb_data:
     name: redisdb_data
   mongodb_data:
     name: mongodb_data
-  ldap_data:
-    name: ldap_data
-  ldap_config:
-    name: ldap_config

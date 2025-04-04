@@ -13,6 +13,8 @@ services:
   #infrastructure section
   portainer:
     image: portainer/portainer-ce:2.27.2
+  vault:
+    image: hashicorp/vault:1.15.4
   #service section
 
 #network section

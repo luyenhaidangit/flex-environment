@@ -32,3 +32,5 @@ volumes:
     name: redisdb_data
   mongodb_data:
     name: mongodb_data
+  vault_data:
+    name: vault_data

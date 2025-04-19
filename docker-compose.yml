@@ -1,4 +1,3 @@
-version: '3.8'
 # Docker compose file for the Flex environment
 
 services:

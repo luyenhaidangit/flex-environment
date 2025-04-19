@@ -8,7 +8,7 @@ services:
       - ACCEPT_ORACLE_LICENSE=yes
       - ORACLE_SID=FREE
       - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=Luyenhaidang10062002@
+      - ORACLE_PWD=haidang106
     ports:
       - "1521:1521"
     volumes:

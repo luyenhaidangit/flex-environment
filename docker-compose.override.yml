@@ -9,10 +9,6 @@ services:
       - ORACLE_SID=FREE
       - ORACLE_PDB=ORCLPDB1
       - ORACLE_PWD=haidang106
-      - INIT_SGA_SIZE=512M
-      - INIT_PGA_SIZE=256M
-    mem_limit: 2g
-    mem_reservation: 1g
     ports:
       - "1521:1521"
     volumes:

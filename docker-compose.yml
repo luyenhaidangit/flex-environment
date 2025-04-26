@@ -12,14 +12,7 @@ services:
   #infrastructure section
   portainer:
     image: portainer/portainer-ce:2.27.2
-  vault:
-    image: hashicorp/vault:1.15.4
   #service section
-
-#network section
-networks:
-  flex-network:
-    driver: bridge
 
 #volumes section
 volumes:
@@ -31,5 +24,3 @@ volumes:
     name: redisdb_data
   mongodb_data:
     name: mongodb_data
-  vault_data:
-    name: vault_data

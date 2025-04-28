@@ -24,15 +24,15 @@ services:
     environment:
       - REDIS_PASSWORD=Luyenhaidang10062002@
 
-  mongodb:
-    container_name: mongodb
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=admin123
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodb_data:/data/db
+  # mongodb:
+  #   container_name: mongodb
+  #   environment:
+  #     - MONGO_INITDB_ROOT_USERNAME=admin
+  #     - MONGO_INITDB_ROOT_PASSWORD=admin123
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongodb_data:/data/db
 
   #infrastructure section
   portainer:

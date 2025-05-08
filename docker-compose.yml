@@ -6,6 +6,8 @@ services:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   redisdb:
     image: redis:7-alpine
+  mysql:
+    image: mysql:8.0
   # mongodb:
   #   image: mongo:6.0
   
@@ -22,5 +24,7 @@ volumes:
     name: securitiesdb_data
   redisdb_data:
     name: redisdb_data
+  mysql_data:
+    name: mysql_data
   # mongodb_data:
   #   name: mongodb_data

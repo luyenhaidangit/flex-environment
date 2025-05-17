@@ -2,17 +2,17 @@
 
 services:
   #database section
-  securitiesdb:
-    container_name: securitiesdb
-    environment:
-      - ACCEPT_ORACLE_LICENSE=yes
-      - ORACLE_SID=FREE
-      - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=haidang106
-    ports:
-      - "1521:1521"
-    volumes:
-      - securitiesdb_data:/opt/oracle/oradata
+  # securitiesdb:
+  #   container_name: securitiesdb
+  #   environment:
+  #     - ACCEPT_ORACLE_LICENSE=yes
+  #     - ORACLE_SID=FREE
+  #     - ORACLE_PDB=ORCLPDB1
+  #     - ORACLE_PWD=haidang106
+  #   ports:
+  #     - "1521:1521"
+  #   volumes:
+  #     - securitiesdb_data:/opt/oracle/oradata
 
   redisdb:
     container_name: redisdb
@@ -23,18 +23,6 @@ services:
     command: ["redis-server", "--requirepass", "Luyenhaidang10062002@"]
     environment:
       - REDIS_PASSWORD=Luyenhaidang10062002@
-
-  mysql:
-    container_name: mysql
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: haidang106
-      MYSQL_DATABASE: dormitory
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: haidang106
-    volumes:
-      - mysql_data:/var/lib/mysql
 
   # mongodb:
   #   container_name: mongodb

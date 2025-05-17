@@ -2,14 +2,10 @@
 
 services:
   #database section
-  securitiesdb:
-    image: container-registry.oracle.com/database/free:23.5.0.0-lite
+  # securitiesdb:
+  #   image: container-registry.oracle.com/database/free:23.5.0.0-lite
   redisdb:
     image: redis:7-alpine
-  mysql:
-    image: mysql:8.4.5
-  # mongodb:
-  #   image: mongo:6.0
   
   #infrastructure section
   portainer:
@@ -20,11 +16,9 @@ services:
 volumes:
   portainer_data:
     name: portainer_data
-  securitiesdb_data:
-    name: securitiesdb_data
+  # securitiesdb_data:
+  #   name: securitiesdb_data
   redisdb_data:
     name: redisdb_data
-  mysql_data:
-    name: mysql_data
   # mongodb_data:
   #   name: mongodb_data

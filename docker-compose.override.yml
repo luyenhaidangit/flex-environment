@@ -24,6 +24,19 @@ services:
     environment:
       - REDIS_PASSWORD=Luyenhaidang10062002@
 
+  ollama:
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    runtime: nvidia # nếu có GPU NVIDIA, cần cài `nvidia-docker2`
+
   # mongodb:
   #   container_name: mongodb
   #   environment:

@@ -12,8 +12,6 @@ services:
   #infrastructure section
   portainer:
     image: portainer/portainer-ce:2.27.2
-  ollama:
-    image: ghcr.io/ollama/ollama:latest
   #service section
 
 #volumes section

@@ -24,18 +24,15 @@ services:
     environment:
       - REDIS_PASSWORD=Luyenhaidang10062002@
 
-  ollama:
-    container_name: ollama
+  sqlserverdb:
+    container_name: sqlserverdb
     ports:
-      - "11434:11434"
+      - "1433:1433"
     volumes:
-      - ollama_data:/root/.ollama
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
-    runtime: nvidia # nếu có GPU NVIDIA, cần cài `nvidia-docker2`
+      - sqlserverdb_data:/var/opt/mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD="Thanh@2003abc!"
 
   # mongodb:
   #   container_name: mongodb

@@ -6,6 +6,8 @@ services:
     image: container-registry.oracle.com/database/free:23.5.0.0-lite
   redisdb:
     image: redis:7-alpine
+  sqlserverdb:
+    image: mcr.microsoft.com/mssql/server:2022-latest
   
   #infrastructure section
   portainer:
@@ -22,7 +24,7 @@ volumes:
     name: securitiesdb_data
   redisdb_data:
     name: redisdb_data
-  ollama_data:
-    name: ollama_data
+  sqlserverdb_data:
+    name: sqlserverdb_data
   # mongodb_data:
   #   name: mongodb_data

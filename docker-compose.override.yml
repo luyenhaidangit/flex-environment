@@ -32,7 +32,8 @@ services:
       - sqlserverdb_data:/var/opt/mssql
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD="Thanh123456"
+      - MSSQL_SA_PASSWORD="Thanh@2003abc!"
+      - SA_PASSWORD="Thanh@2003abc!"
 
   # mongodb:
   #   container_name: mongodb

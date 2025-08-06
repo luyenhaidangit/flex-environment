@@ -13,6 +13,7 @@ context:
     - Tên dịch vụ viết thường, phân tách bằng dấu gạch dưới hoặc liền (ví dụ: redisdb, sqlserverdb)
     - Tên volumes kết thúc bằng _data (ví dụ: redisdb_data)
     - Sử dụng biến môi trường cho các thông tin nhạy cảm (password, user, v.v.)
+    - Images phải chỉ định version cụ thể (không sử dụng latest hoặc không tag)
     - Sử dụng override file để cấu hình local/dev (ports, volumes, env)
 
 # ----------------

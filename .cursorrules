@@ -56,8 +56,8 @@ testing: |
 # FILE & FOLDER STRUCTURE
 # ----------------
 file_structure: |
-  - docker-compose.yml: định nghĩa các service chính
-  - docker-compose.override.yml: cấu hình bổ sung cho môi trường local/dev
+  - docker-compose.yml: chỉ lưu image kèm version/tag cho từng service (không lưu container_name, ports, environment, volumes, command, ...)
+  - docker-compose.override.yml: cấu hình bổ sung cho môi trường local/dev (container_name, ports, environment, volumes, command, ...)
   - restart.sh: script hỗ trợ khởi động lại toàn bộ môi trường
   - volumes đặt tên theo convention: <service>_data
   - Mỗi service/backend nên có thư mục riêng (nếu mở rộng)

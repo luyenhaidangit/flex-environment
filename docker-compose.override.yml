@@ -64,5 +64,4 @@ services:
     volumes:
       - jenkins_data:/var/jenkins_home
     environment:
-      - JENKINS_OPTS=--prefix=/jenkins
   #service section

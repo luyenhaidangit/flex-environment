@@ -16,9 +16,9 @@ docker compose -f docker-compose.yml -f docker-compose.override.yml pull || { ec
 echo "Đang tạo container từ image cho tất cả dịch vụ..."
 docker compose -f docker-compose.yml -f docker-compose.override.yml create || { echo "Không thể tạo container từ image."; exit 1; }
 
-# Chỉ chạy dịch vụ Portainer
-echo "Đang khởi động lại dịch vụ Portainer..."
-docker compose -f docker-compose.yml -f docker-compose.override.yml up -d portainer || { echo "Không thể khởi động dịch vụ Portainer."; exit 1; }
+# Chạy dịch vụ Portainer và Jenkins
+echo "Đang khởi động lại dịch vụ Portainer và Jenkins..."
+docker compose -f docker-compose.yml -f docker-compose.override.yml up -d portainer jenkins || { echo "Không thể khởi động dịch vụ Portainer hoặc Jenkins."; exit 1; }
 
 # Thông báo hoàn thành
-echo "Đã cập nhật và khởi động lại dịch vụ Portainer thành công."
+echo "Đã cập nhật và khởi động lại dịch vụ Portainer và Jenkins thành công."

@@ -15,3 +15,7 @@ pgadmin
 postgre
 - http://localhost:5432
 - admin/Luyenhaidang10062002@/CustomerDb
+
+jenkins
+- http://localhost:8080/jenkins
+- admin/password: Xem log container lần đầu để lấy initialAdminPassword

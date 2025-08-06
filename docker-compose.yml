@@ -13,6 +13,8 @@ services:
   portainer:
     image: portainer/portainer-ce:2.27.2
   #service section
+  jenkins:
+    image: jenkins/jenkins:2.440.3-lts-jdk17
 
 #volumes section
 volumes:
@@ -26,3 +28,5 @@ volumes:
     name: sqlserverdb_data
   # mongodb_data:
   #   name: mongodb_data
+  jenkins_data:
+    name: jenkins_data

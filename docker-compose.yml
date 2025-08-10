@@ -8,7 +8,10 @@ services:
     image: redis:7-alpine
   sqlserverdb:
     image: mcr.microsoft.com/azure-sql-edge:latest
-  
+  # broker section:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+
   #infrastructure section
   portainer:
     image: portainer/portainer-ce:2.27.2
@@ -30,3 +33,5 @@ volumes:
   #   name: mongodb_data
   jenkins_data:
     name: jenkins_data
+  rabbitmq_data:
+    name: rabbitmq_data

@@ -63,4 +63,16 @@ services:
       - "50000:50000"
     volumes:
       - jenkins_data:/var/jenkins_home
+    
+  # broker section
+  rabbitmq:
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # UI
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: Admin#12345
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
   #service section

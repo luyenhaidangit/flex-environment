@@ -1,4 +1,10 @@
 # flex-environment
+
+# Github Action
+winget install --id GitHub.cli
+- gh secret set SERVER_HOST --body "213.35.100.75" --repo luyenhaidangit/flex-environment
+- gh secret set SERVER_USER --body "ubuntu" --repo luyenhaidangit/flex-environment
+- Get-Content "$env:USERPROFILE\.ssh\ssh-key-2025-06-15.key" -Raw | gh secret set SERVER_SSH_KEY --repo luyenhaidangit/flex-environment --body -
  
 portainer
 - http://localhost:9000

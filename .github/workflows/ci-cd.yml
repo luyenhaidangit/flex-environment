@@ -1,4 +1,4 @@
-name: Deploy via SSH (run remote script)
+name: Restart flex service on Oracle Cloud
 
 on:
   push:

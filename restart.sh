@@ -21,4 +21,4 @@ echo "Đang khởi động lại dịch vụ Portainer và Jenkins..."
 docker compose -f docker-compose.yml -f docker-compose.override.yml up -d || { echo "Không thể khởi động dịch vụ Portainer hoặc Jenkins."; exit 1; }
 
 # Thông báo hoàn thành
-echo "Đã cập nhật và khởi động lại dịch vụ Portainer và Jenkins thành công."
+echo "Đã cập nhật và khởi động lại dịch vụ thành công."

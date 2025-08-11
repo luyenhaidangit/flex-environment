@@ -19,7 +19,7 @@ services:
     image: portainer/portainer-ce:2.27.2
   #service section
   jenkins:
-    image: jenkins/jenkins:2.440.3-lts-jdk17
+    image: jenkins/jenkins:2.516.1-lts
 
 #volumes section
 volumes:

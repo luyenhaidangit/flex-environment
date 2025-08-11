@@ -1,7 +1,10 @@
-name: Restart flex service on Oracle Cloud
+name: Restart Flex services
+description: Restart services in the Flex environment using SSH
 
 on:
   push:
+    branches: [ main ]
+  pull_request:
     branches: [ main ]
   workflow_dispatch:
 

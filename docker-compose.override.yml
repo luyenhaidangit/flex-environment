@@ -14,6 +14,7 @@ services:
   #   volumes:
   #     - securitiesdb_data:/opt/oracle/oradata
 
+  # cache section
   redisdb:
     container_name: redisdb
     ports:
@@ -23,6 +24,16 @@ services:
     command: ["redis-server", "--requirepass", "Luyenhaidang10062002@"]
     environment:
       - REDIS_PASSWORD=Luyenhaidang10062002@
+
+  redisinsight:
+    image: redis/redisinsight:latest
+    container_name: redisinsight
+    environment:
+      - RI_APP_PORT=5540
+    ports:
+      - "5540:5540"
+    volumes:
+      - redisinsight_data:/data
 
   sqlserverdb:
     container_name: sqlserverdb

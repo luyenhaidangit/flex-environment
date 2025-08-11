@@ -6,6 +6,8 @@ services:
   #   image: container-registry.oracle.com/database/free:23.5.0.0-lite
   redisdb:
     image: redis:7-alpine
+  redisinsight:
+    image: redislabs/redisinsight:2.70
   sqlserverdb:
     image: mcr.microsoft.com/azure-sql-edge:latest
   # broker section:
@@ -27,6 +29,8 @@ volumes:
   #   name: securitiesdb_data
   redisdb_data:
     name: redisdb_data
+  redisinsight_data:
+    name: redisinsight_data
   sqlserverdb_data:
     name: sqlserverdb_data
   # mongodb_data:
